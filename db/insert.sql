@@ -1,8 +1,21 @@
-INSERT INTO pedidos (mesa, status) VALUES
-(1, 'Em preparo'),
-(2, 'Servido'),
-(3, 'Cancelado');
-INSERT INTO lanches (name, description, price) VALUES
-('X-Burger', 'Hambúrguer com queijo, alface, tomate e maionese', 15.00),
-('X-Salada', 'Hambúrguer com queijo, alface, tomate, cebola e maionese', 18.00),
-('X-Bacon', 'Hambúrguer com queijo, bacon, alface, tomate e maionese', 20.00);
+CREATE TABLE pacientes (
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    data_nascimento DATE NOT NULL,
+    genero VARCHAR(10),
+    telefone VARCHAR(15),
+    endereco TEXT
+);
+
+CREATE TABLE medicos (
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    especialidade VARCHAR(100),
+    telefone VARCHAR(15)
+);
+
+CREATE TABLE especialidades (
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL
+);
+
